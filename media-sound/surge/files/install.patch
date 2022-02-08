@@ -1,0 +1,21 @@
+diff --git a/build-linux.sh b/build-linux.sh
+index e545441b..be0600c4 100755
+--- a/build-linux.sh
++++ b/build-linux.sh
+@@ -251,11 +251,11 @@ if [[ ! -z "$option_local" ]]; then
+     headless_dest_path="$HOME/bin"
+     data_path="$HOME/.local/share/surge"
+ else
+-    vst2_dest_path="/usr/lib/vst"
+-    vst3_dest_path="/usr/lib/vst3"
+-    lv2_dest_path="/usr/lib/lv2"
+-    headless_dest_path="/usr/bin"
+-    data_path="/usr/share/surge"
++    : ${vst2_dest_path:="/usr/lib/vst"}
++    : ${vst3_dest_path:="/usr/lib/vst3"}
++    : ${lv2_dest_path:="/usr/lib/lv2"}
++    : ${headless_dest_path:="/usr/bin"}
++    : ${data_path:="/usr/share/surge"}
+ fi
+ 
+ case $1 in

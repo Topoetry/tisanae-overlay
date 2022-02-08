@@ -1,0 +1,4 @@
+#!/sbin/openrc-run
+
+command=/usr/bin/fanctl
+command_args="-c /etc/fanctl.yaml &"
