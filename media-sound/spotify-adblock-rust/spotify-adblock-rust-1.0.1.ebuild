@@ -23,7 +23,7 @@ inherit cargo xdg
 
 DESCRIPTION="Spotify adblocker"
 HOMEPAGE="https://github.com/abba23/spotify-adblock"
-SRC_URI="https://github.com/abba23/${PN}/archive/refs/tags/v${PV}.tar.gz
+SRC_URI="https://github.com/abba23/spotify-adblock/archive/refs/tags/v${PV}.tar.gz
 $(cargo_crate_uris ${CRATES})"
 KEYWORDS="~amd64"
 
@@ -33,6 +33,7 @@ IUSE=""
 
 RDEPEND="media-sound/spotify"
 
+S="${WORKDIR}/spotify-adblock-${PV}"
 src_build() {
 	emake
 }
@@ -52,7 +53,7 @@ src_install() {
 	# Adblock lib install
 	newlib.so target/release/libspotifyadblock.so spotify-adblock.so
 
-	insinto /etc/"${PN}"
+	insinto /etc/spotify-adblock
 	doins config.toml
 
 	insinto /usr/share/applications
