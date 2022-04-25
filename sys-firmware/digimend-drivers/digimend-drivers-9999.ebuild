@@ -10,7 +10,6 @@ HOMEPAGE="https://github.com/DIGImend/digimend-kernel-drivers"
 
 if [[ ${PV} == "9999" ]]; then
 	inherit git-r3
-	KEYWORDS="~amd64 ~arm64 ~ppc64"
 	EGIT_REPO_URI="https://github.com/DIGImend/digimend-kernel-drivers"
 else
 	SRC_URI="https://github.com/DIGImend/digimend-kernel-drivers/releases/download/v${PV}/digimend-kernel-drivers-${PV}.tar.gz"
