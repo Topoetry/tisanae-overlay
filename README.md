@@ -1,4 +1,4 @@
-# Tisanae, my personnal gentoo overlay
+# https://codeberg.org/Topoetry/tisanae-overlay (mirror of Tisanae, my personnal gentoo overlay) (OUTDATED)
 A lot of the ebuilds come from other sources.
 Yabridge, drumgizmo, iempluginsuite fail.
 .
